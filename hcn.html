@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator Running Hours Report System</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕒</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-container">
+        <h1><i class="fas fa-gauge-high"></i>Generator Running Hours Reports</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-location-dot"></i>Provincial Report</a></li>
+          <li><a href="contractor.html"><i class="fas fa-users-gear"></i>Contractor Report</a></li>
+          <li class="active"><a href="hcn.html"><i class="fas fa-network-wired"></i>HCN Report</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="app-content">
+      <section class="processing-section">
+        <div id="loadingMessage" class="loading-message">
+          <div class="spinner"></div>
+          <span>Processing data...</span>
+        </div>
+        <div id="errorMessage" class="error-message"></div>
+
+        <div class="actions">
+          <button id="refreshBtn" class="button primary"><i class="fas fa-rotate"></i>Refresh Report</button>
+          <button id="copyTableBtn" class="button secondary"><i class="fas fa-copy"></i>Copy Report</button>
+          <a href="index.html" class="button outline"><i class="fas fa-arrow-right-arrow-left"></i>Back to Upload</a>
+        </div>
+      </section>
+
+      <section id="reportSection" class="report-section">
+        <div id="reportContainer" class="card">
+          <h2><i class="fas fa-network-wired"></i>HCN Report</h2>
+          <div class="table-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2025 Vodafone PNG Generator Fuel Monitoring System</p>
+      <p class="footer-credit">Developed by Alphie Kia</p>
+    </footer>
+  </div>
+
+  <script src="src/js/utils.js"></script>
+  <script src="src/js/hcnReport.js"></script>
+</body>
+</html>
